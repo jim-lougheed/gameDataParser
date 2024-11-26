@@ -1,0 +1,15 @@
+C:\Users\Jim\Documents\Dev\Projects\C#\GameDataParser\GameDataParser\bin\Debug\net8.0\GameDataParser.exe
+C:\Users\Jim\Documents\Dev\Projects\C#\GameDataParser\GameDataParser\bin\Debug\net8.0\GameDataParser.deps.json
+C:\Users\Jim\Documents\Dev\Projects\C#\GameDataParser\GameDataParser\bin\Debug\net8.0\GameDataParser.runtimeconfig.json
+C:\Users\Jim\Documents\Dev\Projects\C#\GameDataParser\GameDataParser\bin\Debug\net8.0\GameDataParser.dll
+C:\Users\Jim\Documents\Dev\Projects\C#\GameDataParser\GameDataParser\bin\Debug\net8.0\GameDataParser.pdb
+C:\Users\Jim\Documents\Dev\Projects\C#\GameDataParser\GameDataParser\obj\Debug\net8.0\GameDataParser.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jim\Documents\Dev\Projects\C#\GameDataParser\GameDataParser\obj\Debug\net8.0\GameDataParser.AssemblyInfoInputs.cache
+C:\Users\Jim\Documents\Dev\Projects\C#\GameDataParser\GameDataParser\obj\Debug\net8.0\GameDataParser.AssemblyInfo.cs
+C:\Users\Jim\Documents\Dev\Projects\C#\GameDataParser\GameDataParser\obj\Debug\net8.0\GameDataParser.csproj.CoreCompileInputs.cache
+C:\Users\Jim\Documents\Dev\Projects\C#\GameDataParser\GameDataParser\obj\Debug\net8.0\GameDataParser.sourcelink.json
+C:\Users\Jim\Documents\Dev\Projects\C#\GameDataParser\GameDataParser\obj\Debug\net8.0\GameDataParser.dll
+C:\Users\Jim\Documents\Dev\Projects\C#\GameDataParser\GameDataParser\obj\Debug\net8.0\refint\GameDataParser.dll
+C:\Users\Jim\Documents\Dev\Projects\C#\GameDataParser\GameDataParser\obj\Debug\net8.0\GameDataParser.pdb
+C:\Users\Jim\Documents\Dev\Projects\C#\GameDataParser\GameDataParser\obj\Debug\net8.0\GameDataParser.genruntimeconfig.cache
+C:\Users\Jim\Documents\Dev\Projects\C#\GameDataParser\GameDataParser\obj\Debug\net8.0\ref\GameDataParser.dll
