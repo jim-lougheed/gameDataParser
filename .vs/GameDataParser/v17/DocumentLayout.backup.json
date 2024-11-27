@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Jim\\Documents\\Dev\\Projects\\C#\\GameDataParser\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8E8D4955-B470-44D5-BC0D-AB02EF38D28C}|GameDataParser\\GameDataParser.csproj|c:\\users\\jim\\documents\\dev\\projects\\c#\\gamedataparser\\gamedataparser\\gamedataparserapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8D4955-B470-44D5-BC0D-AB02EF38D28C}|GameDataParser\\GameDataParser.csproj|solutionrelative:gamedataparser\\gamedataparserapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8E8D4955-B470-44D5-BC0D-AB02EF38D28C}|GameDataParser\\GameDataParser.csproj|c:\\users\\jim\\documents\\dev\\projects\\c#\\gamedataparser\\gamedataparser\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8E8D4955-B470-44D5-BC0D-AB02EF38D28C}|GameDataParser\\GameDataParser.csproj|solutionrelative:gamedataparser\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -19,15 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "GameDataParserApp.cs",
+              "DocumentMoniker": "C:\\Users\\Jim\\Documents\\Dev\\Projects\\C#\\GameDataParser\\GameDataParser\\GameDataParserApp.cs",
+              "RelativeDocumentMoniker": "GameDataParser\\GameDataParserApp.cs",
+              "ToolTip": "C:\\Users\\Jim\\Documents\\Dev\\Projects\\C#\\GameDataParser\\GameDataParser\\GameDataParserApp.cs",
+              "RelativeToolTip": "GameDataParser\\GameDataParserApp.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowBEAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T22:05:11.374Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Jim\\Documents\\Dev\\Projects\\C#\\GameDataParser\\GameDataParser\\Program.cs",
               "RelativeDocumentMoniker": "GameDataParser\\Program.cs",
               "ToolTip": "C:\\Users\\Jim\\Documents\\Dev\\Projects\\C#\\GameDataParser\\GameDataParser\\Program.cs",
               "RelativeToolTip": "GameDataParser\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T03:00:03.472Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T03:00:03.472Z"
             }
           ]
         }

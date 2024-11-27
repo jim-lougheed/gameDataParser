@@ -4,3 +4,9 @@
    at GameDataParserApp.Run() in C:\Users\Jim\Documents\Dev\Projects\C#\GameDataParser\GameDataParser\Program.cs:line 45.
 [2024-11-27 4:37:56 PM], ExceptionMessage: JSON in the gamesInvalidFormat.json was not in a valid format., Stack trace:    at JSONReader.Read(String filePath) in C:\Users\Jim\Documents\Dev\Projects\C#\GameDataParser\GameDataParser\JSONReader.cs:line 22
    at GameDataParserApp.Run() in C:\Users\Jim\Documents\Dev\Projects\C#\GameDataParser\GameDataParser\GameDataParserApp.cs:line 33.
+[2024-11-27 5:13:47 PM], ExceptionMessage: JSON in the gamesInvalidFormat.json was not in a valid format., Stack trace:    at JSONReader.Read(String filePath) in C:\Users\Jim\Documents\Dev\Projects\C#\GameDataParser\GameDataParser\JSONReader.cs:line 22
+   at GameDataParserApp.Run() in C:\Users\Jim\Documents\Dev\Projects\C#\GameDataParser\GameDataParser\GameDataParserApp.cs:line 33.
+[2024-11-27 5:14:43 PM], ExceptionMessage: JSON in the gamesInvalidFormat.json was not in a valid format., Stack trace:    at JSONReader.Read(String filePath) in C:\Users\Jim\Documents\Dev\Projects\C#\GameDataParser\GameDataParser\JSONReader.cs:line 22
+   at GameDataParserApp.Run() in C:\Users\Jim\Documents\Dev\Projects\C#\GameDataParser\GameDataParser\GameDataParserApp.cs:line 33.
+[2024-11-27 5:42:09 PM], ExceptionMessage: JSON in the gamesInvalidFormat.json was not in a valid format., Stack trace:    at JSONReader.Read(String filePath) in C:\Users\Jim\Documents\Dev\Projects\C#\GameDataParser\GameDataParser\JSONReader.cs:line 22
+   at GameDataParserApp.Run() in C:\Users\Jim\Documents\Dev\Projects\C#\GameDataParser\GameDataParser\GameDataParserApp.cs:line 22.
