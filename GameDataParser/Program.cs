@@ -19,41 +19,67 @@ public class GameDataParserApp
     }
     public void Run()
     {
-        Console.WriteLine("Enter the name of the file you want to read:");
-        List<string> videoGameData;
         bool validFileName = false;
         while (!validFileName)
         {
+            Console.WriteLine("Enter the name of the file you want to read:");
             var fileName = Console.ReadLine();
             if (fileName == null)
             {
-                Console.WriteLine("File name is null");
+                Console.WriteLine("File name cannot be null.");
             }
             else if (fileName.Length == 0)
             {
-                Console.WriteLine("File name is empty.");
+                Console.WriteLine("File name cannot be empty.");
             } 
             else if (!File.Exists(fileName)) 
             {
-                Console.WriteLine("File name doesn't exist");
+                Console.WriteLine("File not found.");
             } else
             {
                 validFileName = true;
-                var gameData = _stringsRepository.Read(fileName);
-                Console.WriteLine("SUCCESS");
-                if (gameData.Count() > 0)
+                try
                 {
-                    foreach (var game in gameData)
+                    var gameData = _stringsRepository.Read(fileName);
+                    if (gameData.Count() > 0)
                     {
-                        Console.WriteLine(game);
+                        Console.WriteLine("Loaded games are:");
+                        foreach (var game in gameData)
+                        {
+                            Console.WriteLine(game);
+                        }
                     }
-                } else
+                    else
+                    {
+                        Console.WriteLine("No games are present in the input file.");
+                    }
+                } catch (JsonParsingException jsonParsingException)
                 {
-                    Console.WriteLine("No games are present in the input file.");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine(jsonParsingException.Message + jsonParsingException.JsonBody);
+                    Console.WriteLine("Sorry! The application has experience an unexpected error and will have to be closed.");
+                    Console.ResetColor();
                 }
+                
             }
         }
+        Console.WriteLine("Press any key to close.");
         Console.ReadKey();
+    }
+}
+
+public class JsonParsingException : Exception
+{
+    public string JsonBody { get;  }
+    public JsonParsingException() { }
+    public JsonParsingException(string message) : base(message) { }
+    public JsonParsingException(string message, Exception innerException) : base(message, innerException) { }
+    public JsonParsingException(string message, string jsonBody) : base(message) {
+        JsonBody = jsonBody;
+    }
+    public JsonParsingException(string message, string jsonBody, Exception innerException) : base(message, innerException)
+    {
+        JsonBody = jsonBody;
     }
 }
 
@@ -62,27 +88,15 @@ public abstract class StringsRepository
     public abstract List<Game> TextToStrings(string fileContents);
     public List<Game> Read(string filePath)
     {
-        if (File.Exists(filePath))
+        var fileContents = File.ReadAllText(filePath);
+        try
         {
-            var fileContents = File.ReadAllText(filePath);
-            try
-            {
-                return TextToStrings(fileContents);
-            } 
-            catch (JsonException ex)
-            {
-                Console.WriteLine("Json exception", ex.Message, ex.StackTrace);
-                return new List<Game>();
-            }
-            //foreach (var game in gameData)
-            //{
-            //    Console.WriteLine(game.Title);
-            //    Console.WriteLine(game.ReleaseYear);
-            //    Console.WriteLine(game.Rating);
-            //}
-            //return TextToStrings(fileContents);
+            return TextToStrings(fileContents);
         }
-        return new List<Game>();
+        catch (JsonException jsonException)
+        {
+            throw new JsonParsingException($"JSON in the {filePath} was not in a valid format. JSON body: ", fileContents);
+        }
     }
 }
 
