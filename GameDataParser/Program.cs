@@ -39,8 +39,18 @@ public class GameDataParserApp
             } else
             {
                 validFileName = true;
-                _stringsRepository.Read(fileName);
-                //Console.WriteLine("SUCCESS", videoGameData);
+                var gameData = _stringsRepository.Read(fileName);
+                Console.WriteLine("SUCCESS");
+                if (gameData.Count() > 0)
+                {
+                    foreach (var game in gameData)
+                    {
+                        Console.WriteLine(game);
+                    }
+                } else
+                {
+                    Console.WriteLine("No games are present in the input file.");
+                }
             }
         }
         Console.ReadKey();
@@ -50,21 +60,29 @@ public class GameDataParserApp
 public abstract class StringsRepository
 {
     public abstract List<Game> TextToStrings(string fileContents);
-    public void Read(string filePath)
+    public List<Game> Read(string filePath)
     {
         if (File.Exists(filePath))
         {
             var fileContents = File.ReadAllText(filePath);
-            var gameData = TextToStrings(fileContents);
-            foreach (var game in gameData)
+            try
             {
-                Console.WriteLine(game.Title);
-                Console.WriteLine(game.ReleaseYear);
-                Console.WriteLine(game.Rating);
+                return TextToStrings(fileContents);
+            } 
+            catch (JsonException ex)
+            {
+                Console.WriteLine("Json exception", ex.Message, ex.StackTrace);
+                return new List<Game>();
             }
+            //foreach (var game in gameData)
+            //{
+            //    Console.WriteLine(game.Title);
+            //    Console.WriteLine(game.ReleaseYear);
+            //    Console.WriteLine(game.Rating);
+            //}
             //return TextToStrings(fileContents);
         }
-        //return new List<string>();
+        return new List<Game>();
     }
 }
 
@@ -82,6 +100,10 @@ public class StringsJSONRepository : StringsRepository
 
 public class Game
 {
+    public override string ToString()
+    {
+        return $"{Title}, released in {ReleaseYear}, rating: {Rating}";
+    }
     public string Title { get; set; }
     public int ReleaseYear { get; set; }
     public float Rating { get; set; }
